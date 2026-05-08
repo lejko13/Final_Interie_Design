@@ -30,7 +30,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
         onClick={onClose}
       >
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/95 backdrop-blur-xl" />
+        <div className="absolute inset-0 bg-black/95 backdrop-blur-xl h-screen" />
 
         {/* Close button */}
         <button
