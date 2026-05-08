@@ -35,7 +35,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute z-50 top-6 right-6 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
         >
           <X className="w-6 h-6 text-white" />
         </button>
@@ -44,7 +44,9 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
         {images.length > 1 && (
           <button
             onClick={(e) => { e.stopPropagation(); onPrev(); }}
-            className="absolute left-4 md:left-8 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+               className="absolute bottom-20 left-4 md:top-1/2 md:bottom-auto md:left-8 md:-translate-y-1/2 lg:left-12 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+
+            // className="absolute  z-50  bottom-28 left-4 md:left-8 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
@@ -63,7 +65,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
           <img
             src={images[currentIndex]}
             alt=""
-            className="max-w-full max-h-[85vh] object-contain rounded-lg"
+            className="max-w-full max-h-[60vh] object-contain rounded-lg"
           />
         </motion.div>
 
@@ -71,7 +73,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
         {images.length > 1 && (
           <button
             onClick={(e) => { e.stopPropagation(); onNext(); }}
-            className="absolute right-4 md:right-8 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+   className="absolute bottom-20 right-4 md:top-1/2 md:bottom-auto md:right-8 md:-translate-y-1/2 lg:right-12 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>

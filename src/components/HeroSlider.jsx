@@ -30,7 +30,7 @@ export default function HeroSlider({ images, title, subtitle, backLink, backLabe
   };
 
   return (
-    <section className="relative h-[60vh] md:h-[75vh] overflow-hidden ">
+    <section className="relative h-[500px] md:h-[75vh] overflow-hidden ">
       {/* Images */}
       <AnimatePresence initial={false} custom={direction} mode="sync">
         <motion.img
