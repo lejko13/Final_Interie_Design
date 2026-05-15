@@ -80,7 +80,13 @@ export default function Header() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }}
            className="flex items-center gap-3 group">
-              <div
+<img
+  src={theme === 'light' ? "/public/logotmave.png" : "/public/logopoporad.png"}
+  alt="Logo"
+  className="h-10 w-auto"
+/>
+     
+              {/* <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-body text-sm font-bold tracking-wide transition-colors duration-500 ${logoBg}`}
               >
                 DK
@@ -98,7 +104,7 @@ export default function Header() {
                 >
                   {t('about.subtitle')}
                 </div>
-              </div>
+              </div> */}
             </Link>
          
 
@@ -193,7 +199,7 @@ export default function Header() {
             {/* CTA button */}
             <Link
               to="/contact"
-              className={`hidden md:flex items-center gap-1.5 px-5 py-2.5 font-body text-sm font-medium rounded-full transition-all duration-300 ${
+              className={`hidden lg:flex items-center gap-1.5 px-5 py-2.5 font-body text-sm font-medium rounded-full transition-all duration-300 ${
                 useWhiteText
                   ? 'bg-white text-foreground hover:bg-white/90'
                   : 'bg-foreground text-background hover:opacity-90'
