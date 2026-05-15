@@ -81,7 +81,7 @@ export default function Header() {
   }}
            className="flex items-center gap-3 group">
 <img
-  src={theme === 'light' ? "/public/logotmave.png" : "/public/logopoporad.png"}
+  src={theme === 'light' ? "/logotmave.png" : "/logopoporad.png"}
   alt="Logo"
   className="h-10 w-auto"
 />
